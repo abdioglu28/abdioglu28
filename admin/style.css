@@ -1,0 +1,63 @@
+body{
+    background-image: linear-gradient(-225deg, #000000 50%, #923cb5 50%) !important;
+}
+  body::before {
+    content: "";
+    position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+    height: 100%;
+    background: linear-gradient(#923cb5, #000);
+    clip-path: circle(30% at right 70%);
+    z-index: -1 !important;
+
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#923cb5, #000);
+    clip-path: circle(28% at 10% 10%);
+    z-index: -1 !important;
+
+}
+
+.btn-new{
+font-family: sans-serif;
+text-decoration: none;
+border: none;
+background-image: linear-gradient(-125deg, #7A3296 0%, #923cb5 100%);
+letter-spacing: 2px;
+text-align: center;
+position: relative;
+transition: all .35s;
+margin-bottom: 4px;
+}
+
+.btn-new span{
+position: relative;
+z-index: 2 !important;
+}
+
+.btn-new:after{
+position: absolute;
+content: "";
+top: 0;
+left: 0;
+width: 0;
+height: 100%;
+background: #000;
+transition: all .35s;
+}
+
+.btn-new:hover{
+color: #fff;
+}
+
+.btn-new:hover:after{
+width: 100%;}

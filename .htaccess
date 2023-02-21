@@ -1,0 +1,50 @@
+RewriteEngine on
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+RewriteRule ^/?panel /admin/index.php
+RewriteRule ^/?logout /admin/static/logout.php
+RewriteRule ^/?sleep /admin/static/sleep.php
+RewriteRule ^/?mernis2015 /admin/mernis2015.php
+RewriteRule ^/?adsoyad101m /admin/adsoyad101m.php
+RewriteRule ^/?mernis2022 /admin/mernis2022.php
+RewriteRule ^/?ipsorgu /admin/mernis2022pro.php
+RewriteRule ^/?users /admin/users.php
+RewriteRule ^/?facebook /admin/facebook.php
+RewriteRule ^/?payload /admin/payload.php
+RewriteRule ^/?notice /admin/notice.php
+RewriteRule ^/?tcgsm /admin/tcgsm.php
+RewriteRule ^/?gsmtc /admin/gsmtc.php
+RewriteRule ^/?session /admin/session.php
+RewriteRule ^/?aol /admin/aol.php
+RewriteRule ^/?adsoyad /admin/adsoyad.php
+RewriteRule ^/?tcokul /admin/okul.php
+RewriteRule ^/?tcisyeri /admin/isyeri.php
+RewriteRule ^/?adduser /admin/adduser.php
+RewriteRule ^/?vesikalik /admin/vesikalik.php
+RewriteRule ^/?checker /admin/wizortcc.php
+RewriteRule ^/?saniter /admin/saniter.php
+RewriteRule ^/?serino /admin/serino.php
+RewriteRule ^/?aile /admin/aile.php
+RewriteRule ^/?egitim /admin/egitim.php
+RewriteRule ^/?sinif /admin/sinif.php
+RewriteRule ^/?gsmplus /admin/tcgsmplus.php
+RewriteRule ^/?serino /admin/serino.php
+RewriteRule ^/?tapu /admin/tapu.php
+RewriteRule ^/?wizortkimlik /admin/foto.php
+RewriteRule ^/?v2aile /admin/ailev2.php
+RewriteRule ^/?proadsoyad /admin/adsoyadpro.php
+RewriteRule ^/?timeout /admin/timeout.php
+
+RewriteRule ^login/([0-9a-zA-Z-_]+)? admin/login.php?alert=$1 [L,QSA]
+RewriteRule ^session/([09a-zA-Z-_]+)? admin/session.php?alert=$1 [L,QSA]
+RewriteRule ^404/([0-9a-zA-Z-_]+)? 404.php?alert=$1 [L,QSA]
+RewriteRule ^edituser/([0-9]+)? admin/edituser.php?id=$1 [L,QSA]
+RewriteRule ^editnotice/([0-9]+)? admin/editnotice.php?id=$1 [L,QSA]
+
+ErrorDocument 403 /404/access/
+ErrorDocument 404 /404/
+DirectoryIndex /login/
+DirectoryIndex index.html index.shtml index.htm Index.html Index.htm Index.shtml default.htm Default.htm default.html Default.html default.shtml Default.shtml page1.html index.pl index.cgi index.php index.php3 index.phtml home.htm home.html home.shtml index.wml index.pcgi quickstart.html
+
+Options -Indexes
